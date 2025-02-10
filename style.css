@@ -1,0 +1,174 @@
+/* Body and overall layout with a subtle textured background */
+body {
+  background-image: url('picture.png'); /* Use your image here */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  /* background: #2d2b29 url('https://www.transparenttextures.com/patterns/old-wall.png') repeat; */ 
+  margin: 0;
+  padding: 0;
+  font-family: 'Playfair Display', serif;
+  line-height: 1.6;
+}
+
+/* Main title styling (outside the container) */
+.main-title {
+  text-align: center;
+  margin: 20px 0;
+}
+.main-title h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 4.5em;
+  color: #ffe644;
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+  margin: 0;
+}
+
+/* Main container with an old-paper translucent effect */
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 50px auto;
+  background: rgba(0, 0, 0, 0.80);
+  padding: 40px;
+  border: 1px solid #e0d6c1;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+}
+
+/* Guide text styling */
+.guide-text {
+  font-size: 1.1em;
+  margin-top: 20px;
+  color: #ffffff;
+  text-align: left;
+  font-style: italic;
+  white-space: pre-line; /* preserves intentional line breaks */
+}
+
+/* Fade-in animation for each sonnet */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Styling for each poem (sonnet) */
+.poem {
+  margin-bottom: 50px;
+  padding-bottom: 20px;
+  border-bottom: 1px dashed #aa9367;
+  
+  /* Hidden initially; animates into view */
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: calc(0.15s * var(--order));
+}
+.poem:last-child {
+  border-bottom: none;
+}
+.poem-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5em;
+  color: #f3e817;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+.poem-line {
+  font-size: 1.2em;
+  margin: 8px 0;
+  text-align: left;
+  margin-left: 225px;
+  color: #ffffff;
+}
+
+/* Falling snowflakes effect (radiant blue only) */
+.snowflake {
+  position: fixed;
+  top: -10px;
+  z-index: 9999;
+  user-select: none;
+  pointer-events: none;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Blue snowflake glow effect */
+.blue-snowflake {
+  text-shadow: 0 0 14px #ffffff, 0 0 12px #ffffff, 0 0 16px #d9f0f8;
+}
+
+
+
+
+
+/* 
+
+/////////////////////////////////////// *//* Write-ups container */
+#writeups {
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 2px dashed #aa9367; /* Creates a subtle separation */
+}
+
+/* Individual write-up block */
+.writeup {
+  margin-bottom: 50px;
+  padding: 25px;
+  background: rgba(0, 0, 0, 0.7); /* Translucent dark effect */
+  border-left: 5px solid #f3e817; /* Adds a golden highlight on the left */
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(255, 230, 68, 0.2); /* Soft glowing effect */
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: calc(0.2s * var(--order)); /* Staggered animation */
+}
+
+/* Write-up section title */
+.writeup h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2em;
+  color: #ffe644;
+  text-align: center;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Write-up content */
+.writeup p {
+  font-size: 1.2em;
+  color: #ffffff;
+  line-height: 1.7;
+  margin: 10px 0;
+  text-align: left;
+  text-indent: 20px;
+}
+
+/* Add subtle glowing effect to text */
+.writeup p:hover {
+  color: #f3e817;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Separator for different write-ups */
+.writeup:not(:last-child) {
+  border-bottom: 1px dashed #aa9367;
+  padding-bottom: 20px;
+}
