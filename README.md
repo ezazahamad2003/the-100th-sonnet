@@ -16,7 +16,7 @@
 - Use it as a creative spark for your own writing or reflections  
 
 ## About the Author  
-The author of *The 100th Sonnet* has a deep love for both Indian music and English poetry, crafting each sonnet with care to preserve the soul of the original while embracing the elegance of the sonnet form.  
+The author of *The 100th Sonnet*  is Zach Xavier1 
 
 ## Connect and Share  
 If this book resonates with you, share your favorite sonnet on social media, discuss your thoughts with fellow poetry lovers, or even request a transformation of your favorite Indian song!  
